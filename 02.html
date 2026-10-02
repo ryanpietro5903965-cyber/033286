@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arquivo 02</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+<div class="eyebrow">ARQUIVO 02 / PRIMEIRA CHAVE</div>
+<h1>Então você descobriu.</h1>
+<p>Agora presta atenção nesta sequência:</p>
+
+<div class="code">3 — 15 — 13 — 5 — 3 — 15</div>
+
+<p class="hint">A=1, B=2, C=3...<br>
+Transforma números em letras.</p>
+
+<input id="answer" placeholder="O que aparece?" autocomplete="off">
+<button onclick="check()">Desbloquear</button>
+<p id="msg" class="msg"></p>
+
+<div class="tiny">Dica: não leia como uma frase. Leia como uma pista.</div>
+</main>
+<script>
+function check(){
+  const a=document.getElementById('answer').value.trim().toLowerCase().replace(/\s/g,'');
+  if(a==='começo'||a==='comeco'){
+    location.href='03.html';
+  }else{
+    document.getElementById('msg').textContent='Ainda não. 3=C, 15=O...';
+  }
+}
+</script>
+</body>
+</html>

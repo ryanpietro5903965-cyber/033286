@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arquivo 05</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+<div class="eyebrow">ARQUIVO 05 / INTERRUPÇÃO</div>
+<h1>Espera.</h1>
+<p>Se você chegou até aqui, provavelmente já percebeu que as pistas não estão aqui por acaso.</p>
+
+<div class="warning">
+  <span>!</span>
+  <p><strong>Há uma última chave.</strong><br>
+  E ela não está escondida em números.</p>
+</div>
+
+<p>Leia somente as palavras em negrito:</p>
+
+<div class="text">
+  Eu <strong>sempre</strong> achei curioso como algumas pessoas entram na nossa vida
+  sem avisar. A gente <strong>nunca</strong> sabe exatamente quando uma conversa
+  vai virar memória. E às vezes uma pessoa se torna <strong>alguém</strong>
+  que você procura mesmo sem perceber. Talvez seja justamente por isso que
+  algumas coisas mereçam ser ditas <strong>agora</strong>.
+</div>
+
+<p class="hint">Pegue a primeira letra de cada palavra em negrito.</p>
+
+<input id="answer" placeholder="Quatro letras..." autocomplete="off">
+<button onclick="check()">Continuar</button>
+<p id="msg" class="msg"></p>
+</main>
+<script>
+function check(){
+  const a=document.getElementById('answer').value.trim().toLowerCase();
+  if(a==='snaa'){
+    location.href='06.html';
+  }else{
+    document.getElementById('msg').textContent='As quatro palavras destacadas começam com S, N, A, A.';
+  }
+}
+</script>
+</body>
+</html>

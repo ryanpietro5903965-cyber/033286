@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arquivo 03</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+<div class="eyebrow">ARQUIVO 03 / ENTRELINHAS</div>
+<h1>Agora é diferente.</h1>
+<p>As respostas abaixo parecem simples. Mas guarda <strong>a primeira letra de cada resposta</strong>.</p>
+
+<div class="question">
+  <label>1. O que sempre aparece depois da noite?</label>
+  <input id="q1" placeholder="Resposta">
+</div>
+<div class="question">
+  <label>2. O que usamos para enxergar?</label>
+  <input id="q2" placeholder="Resposta">
+</div>
+<div class="question">
+  <label>3. O que existe no céu à noite e não é o sol?</label>
+  <input id="q3" placeholder="Resposta">
+</div>
+<div class="question">
+  <label>4. O que uma pessoa sente quando está feliz?</label>
+  <input id="q4" placeholder="Resposta">
+</div>
+
+<button onclick="check()">Juntar as pistas</button>
+<p id="msg" class="msg"></p>
+</main>
+<script>
+function norm(x){return x.trim().toLowerCase();}
+function check(){
+  const a=norm(document.getElementById('q1').value);
+  const b=norm(document.getElementById('q2').value);
+  const c=norm(document.getElementById('q3').value);
+  const d=norm(document.getElementById('q4').value);
+  const goodA=['dia','amanhecer','manhã','manha'];
+  const goodB=['olhos','óculos','oculos'];
+  const goodC=['lua','estrela','estrelas'];
+  const goodD=['alegria','amor','felicidade','feliz'];
+  if(goodA.includes(a)&&goodB.includes(b)&&goodC.includes(c)&&goodD.includes(d)){
+    location.href='04.html';
+  }else{
+    document.getElementById('msg').textContent='Alguma resposta não encaixou. As respostas podem variar, mas pense no sentido das perguntas.';
+  }
+}
+</script>
+</body>
+</html>

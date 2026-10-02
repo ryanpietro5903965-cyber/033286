@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uma coisa que eu nunca te contei</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+  <div class="eyebrow">ARQUIVO 01 / INÍCIO</div>
+  <h1>Tenho uma coisa pra te contar.</h1>
+  <p class="lead">Mas, conhecendo você, eu não vou simplesmente falar.</p>
+  <p>Se quiser descobrir, vai ter que seguir algumas pistas.</p>
+
+  <div class="box">
+    <p><strong>Primeira regra:</strong> não pule etapas.</p>
+    <p><strong>Segunda regra:</strong> algumas coisas aqui têm mais de um significado.</p>
+    <p><strong>Terceira regra:</strong> confia em mim.</p>
+  </div>
+
+  <h2>Primeira charada</h2>
+  <p>Eu posso ser quebrado sem fazer barulho.<br>
+  Posso ser dado sem ser segurado.<br>
+  Quando existe entre duas pessoas, muita coisa muda.</p>
+
+  <input id="answer" placeholder="Sua resposta..." autocomplete="off">
+  <button onclick="check()">Continuar</button>
+  <p id="msg" class="msg"></p>
+</main>
+<script>
+function check(){
+  const a=document.getElementById('answer').value.trim().toLowerCase();
+  const ok=['segredo','um segredo'];
+  if(ok.includes(a)){
+    location.href='02.html';
+  }else{
+    document.getElementById('msg').textContent='Não é essa. Pensa no que pode ser quebrado e também pode existir entre duas pessoas.';
+  }
+}
+</script>
+</body>
+</html>

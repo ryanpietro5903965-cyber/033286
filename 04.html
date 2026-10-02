@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arquivo 04</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+<div class="eyebrow">ARQUIVO 04 / O PADRÃO</div>
+<h1>Você já tem quatro letras.</h1>
+<p>Agora uma pista para descobrir como elas devem ser lidas:</p>
+
+<div class="riddle">
+“Não olhe para o que está escrito.<br>
+Olhe para onde cada coisa começa.”
+</div>
+
+<p>As quatro respostas da etapa anterior começam com:</p>
+
+<div class="letters">D &nbsp; O &nbsp; L &nbsp; A</div>
+
+<p class="lead">Mas isso ainda não é a mensagem.</p>
+<p>Troque cada letra pela próxima letra do alfabeto.</p>
+
+<input id="answer" placeholder="Resultado..." autocomplete="off">
+<button onclick="check()">Abrir próxima página</button>
+<p id="msg" class="msg"></p>
+</main>
+<script>
+function check(){
+  const a=document.getElementById('answer').value.trim().toLowerCase().replace(/\s/g,'');
+  if(a==='epmb'){
+    location.href='05.html';
+  }else{
+    document.getElementById('msg').textContent='D vira E. O vira P. L vira M. A vira B.';
+  }
+}
+</script>
+</body>
+</html>

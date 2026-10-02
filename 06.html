@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arquivo 06</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+<div class="eyebrow">ARQUIVO 06 / ÚLTIMA PERGUNTA</div>
+<h1>Chegou longe.</h1>
+<p>Agora não tem código.</p>
+<p>Não tem número.</p>
+<p>Não tem charada.</p>
+
+<div class="big-question">
+  <p>Depois de tudo isso...</p>
+  <h2>Você quer descobrir o meu segredo?</h2>
+</div>
+
+<div class="buttons">
+  <button onclick="yes()">Sim</button>
+  <button class="ghost" onclick="maybe()">Talvez</button>
+</div>
+
+<p id="msg" class="msg"></p>
+</main>
+<script>
+function yes(){
+  location.href='07.html';
+}
+function maybe(){
+  document.getElementById('msg').textContent='Você já chegou até aqui. Agora vai até o fim.';
+}
+</script>
+</body>
+</html>
